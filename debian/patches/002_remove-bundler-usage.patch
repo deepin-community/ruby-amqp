@@ -1,0 +1,17 @@
+Description: Remove bundler usage in the test suite
+Author: Sebastien Badia <seb@sebian.fr>
+Forwarded: not-needed
+Last-Update: 2016-03-11
+
+--- ruby-amqp-1.5.1.orig/spec/spec_helper.rb
++++ ruby-amqp-1.5.1/spec/spec_helper.rb
+@@ -2,9 +2,6 @@
+
+ $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+
+-require 'bundler'
+-Bundler.setup(:default, :test)
+-
+ require "amqp"
+ require "evented-spec"
+ require "effin_utf8"

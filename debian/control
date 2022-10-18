@@ -1,0 +1,44 @@
+Source: ruby-amqp
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Tollef Fog Heen <tfheen@debian.org>, Sebastien Badia <sbadia@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               rake,
+               ruby-amq-protocol (>= 1.9),
+#ruby-effin-utf8,
+#ruby-evented-spec,
+               ruby-eventmachine,
+               ruby-multi-json,
+               ruby-rspec
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-amqp.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-amqp
+Homepage: https://github.com/ruby-amqp/amqp
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-ruby
+
+Package: ruby-amqp
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby-amq-protocol (>= 1.9),
+         ruby-eventmachine,
+         ${misc:Depends},
+         ${ruby:Depends}
+Provides: ruby-amq-client
+Conflicts: ruby-amq-client
+Replaces: ruby-amq-client
+Description: feature-rich, asynchronous AMQP client
+ AMQP is an open standard for messaging middleware that emphasizes
+ interoperability between different technologies (for example, Java,
+ Ruby, Python, .NET, Node.js, Erlang, C and so on).
+ .
+ Key features of AMQP are very flexible yet simple routing and binary
+ protocol efficiency. AMQP supports many sophisticated features, for
+ example, message acknowledgements, returning of messages to producer,
+ redelivery of messages that couldn't be processed, load balancing
+ between message consumers and so on.
+ .
+ This package contains a ruby client for AMQP.

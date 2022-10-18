@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_install:
+	dh_install
+	rm -rf debian/ruby-amqp/usr/bin
+
+override_dh_installexamples:
+	dh_installexamples -O--buildsystem=ruby
+	rm -rf debian/ruby-amqp/usr/share/doc/ruby-amqp/examples/tls_certificates/testca/certs
+	rm -f  debian/ruby-amqp/usr/share/doc/ruby-amqp/examples/tls_certificates/testca/index.txt.attr.old

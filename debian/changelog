@@ -1,0 +1,94 @@
+ruby-amqp (1.8.0-1) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Sebastien Badia ]
+  * New upstream version 1.8.0
+  * d/control:
+    + Drop compat file, rely on debhelper-compat and bump compat level to 12
+    + Bump Standards-Version to 4.5.0 (no changes needed)
+    + Add Rules-Requires-Root: no
+    + Use salsa.debian.org in Vcs-* fields
+    + Use my Debian email address
+    + Drop Ruby interpreter
+  * Move debian/watch to gemwatch.debian.net
+  * d/copyright: Drop insecure URI
+  * d/upstream: Added metadata
+
+ -- Sebastien Badia <sbadia@debian.org>  Wed, 05 Feb 2020 13:46:36 +0100
+
+ruby-amqp (1.6.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * d/control: Update BD (prepare to enable tests)
+  * d/patches: Remove 001_bump-amq-protocol patch (Closes: #818153)
+
+ -- Sebastien Badia <seb@sebian.fr>  Wed, 06 Apr 2016 14:12:19 +0200
+
+ruby-amqp (1.5.1-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sebastien Badia ]
+  * d/rules: Check dependencies at build time
+  * d/control: Update build dependencies
+  * d/patches: Relax amq-protocol dependency
+  * d/patches: Remove bundler usage in test suite
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sun, 13 Mar 2016 16:31:06 +0000
+
+ruby-amqp (1.5.1-3) unstable; urgency=medium
+
+  * d/control: Add missing break/replaces (Closes: #817012)
+  * d/rules: Remove duplicate files (tls example)
+
+ -- Sebastien Badia <seb@sebian.fr>  Wed, 09 Mar 2016 08:50:43 -0300
+
+ruby-amqp (1.5.1-2) unstable; urgency=medium
+
+  * d/control:
+      Switch to https for Homepage
+      Remove version in the description field
+      Remove ruby-amq-client dependency (ROM) (Closes: #817012)
+
+ -- Sebastien Badia <seb@sebian.fr>  Mon, 07 Mar 2016 11:10:19 -0300
+
+ruby-amqp (1.5.1-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * debian/control: remove obsolete DM-Upload-Allowed flag
+  * use canonical URI in Vcs-* fields
+  * debian/copyright:
+      use DEP5 copyright-format/1.0 official URL for Format field
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Sebastien Badia ]
+  * Imported Upstream version 1.5.1 (Closes: #790764)
+  * d/patches: Remove un-needed patchs
+  * d/control: add myself to uploaders
+
+ -- Sebastien Badia <seb@sebian.fr>  Sat, 05 Mar 2016 19:24:28 -0300
+
+ruby-amqp (0.9.5-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/control:
+    - Bumped standards-version to 3.9.3.
+    - Bumped the build-dependency on gem2deb to >= 0.3.0~.
+    - Fix parse issue due to a sentence starting with a dot (.NET).
+  * debian/copyright:
+    - The Ruby license is actually GPL-2 or the specific Ruby license.
+    - Added a license paragraph for GPL-2.
+
+ -- Paul van Tilburg <paulvt@debian.org>  Fri, 29 Jun 2012 21:40:49 +0200
+
+ruby-amqp (0.9.5-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Fri, 22 Jun 2012 09:03:48 +0200
